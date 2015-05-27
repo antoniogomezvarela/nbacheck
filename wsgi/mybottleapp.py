@@ -51,7 +51,6 @@ def este():
 			contra= i['points_against']
 			diferencia= i['point_differential']
 			team_id= i['team_id']
-			#team_id=team_id.replace("-","_")
 			clasificacioneste.append(first_name)
 			ganadoseste.append(ganados)
 			perdidoseste.append(perdidos)
@@ -106,7 +105,6 @@ def oeste():
 			contra= i['points_against']
 			diferencia= i['point_differential']
 			team_id = i['team_id']
-			#team_id=team_id.replace("-","_")
 			clasificacionoeste.append(first_name)
 			ganadosoeste.append(ganados)
 			perdidosoeste.append(perdidos)
@@ -174,7 +172,7 @@ def equipo():
 
 	idequipo=idequipo.title()
 	wikiequipo=idequipo.replace("-","_")
-	req = requests.get("https://en.wikipedia.org/w/api.php?format=xml&action=query&prop=extracts&exintro=&explaintext=&titles=%s"% wikiequipo)
+	req = requests.get("https://es.wikipedia.org/w/api.php?format=xml&action=query&prop=extracts&exintro=&explaintext=&titles=%s"% wikiequipo)
 	tree = ElementTree.fromstring(req.content)
 	descrip=tree[0][1][0][0].text
 

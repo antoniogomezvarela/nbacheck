@@ -1,5 +1,6 @@
 body{
-	font-size:12px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:14px;
 	color: black;
 	background: url(/static/fondo2.jpg) no-repeat center center fixed;
     background-size: cover;
@@ -29,18 +30,17 @@ body{
 #local{
 	width: 50%;
 	position:absolute;
-	left:13%;
+	left: 5%;
 }
 
 #visitante{
 	width: 50%;
 	position:absolute;
-	left:53%;
+	left:50%;
 }
 
 #jugadores{
 	float:left;
-	left:5%;
 }
 
 #result{
@@ -49,5 +49,51 @@ body{
 
 #descrip{
 	float:right;
-	left: 5%;
+	height: 30%;
+}
+
+table {     
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 12px;   
+    margin: 45px;     
+    width: 480px; 
+    text-align: left;    
+    border-collapse: collapse; 
+}
+
+th {     
+	font-size: 13px;     
+	font-weight: normal;     
+	padding: 8px;     
+	background: #b9c9fe;
+    border-top: 4px solid #aabcfe;    
+    border-bottom: 1px solid #fff; 
+    color: #039; 
+}
+
+td {    
+	padding: 8px;     
+	background: #e8edff;     
+	border-bottom: 1px solid #fff;
+    color: #669;    
+    border-top: 1px solid transparent; 
+}
+
+tr:hover td { 
+	background: #d0dafd; 
+	color: #339; 
+}
+
+a:link {
+	color: #669; 
+}
+a:visited {
+	color: #669; 
+}
+a:active {
+	color: #669; 
+}
+a:hover {
+	text-decoration: underline overline; 
+	 color: #669; 
 }
