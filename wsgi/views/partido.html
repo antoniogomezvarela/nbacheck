@@ -1,0 +1,95 @@
+% include('header.html')
+			<div id='contenido'>
+				<center><h1>{{local}} vs. {{visitante}}</h1></center>
+				<br>
+				<br>
+				<div id='local'>
+					<table border=1>
+						<tr>
+							<td></td>
+							<td><b>1er Cuarto</b></td>
+							<td><b>2º Cuarto</b></td>
+							<td><b>3er Cuarto</b></td>
+							<td><b>4º Cuarto</b></td>
+						</tr>
+						<tr>
+							<td><b>Puntos</b></td>
+							<td>{{cuartoslocal[0]}}</td>
+							<td>{{cuartoslocal[1]}}</td>
+							<td>{{cuartoslocal[2]}}</td>
+							<td>{{cuartoslocal[3]}}</td>
+						</tr>
+					</table>
+					<br>
+					<br>
+					%contador = 0
+					<table border=1>
+						<tr>
+							<td><b>Nombre</b></td>
+							<td><b>Posicion</b></td>
+							<td><b>Puntos</b></td>
+							<td><b>Asistencias</b></td>
+							<td><b>Perdidas</b></td>
+							<td><b>Robos</b></td>
+							<td><b>Faltas P.</b></td>
+						</tr>
+						%for i in listaljugador:
+						<tr>
+							<td>{{i}}</td>
+							<td>{{listalpos[contador]}}</td>
+							<td>{{listalpuntos[contador]}}</td>
+							<td>{{listalasis[contador]}}</td>
+							<td>{{listalperdidas[contador]}}</td>
+							<td>{{listalrobos[contador]}}</td>
+							<td>{{listalfaltas[contador]}}</td>
+						</tr>
+						%contador = contador + 1
+						%end
+					</table>
+				</div>
+				<div id='visitante'>
+					<table border=1>
+						<tr>
+							<td></td>
+							<td><b>1er Cuarto</b></td>
+							<td><b>2º Cuarto</b></td>
+							<td><b>3er Cuarto</b></td>
+							<td><b>4º Cuarto</b></td>
+						</tr>
+						<tr>
+							<td><b>Puntos</b></td>
+							<td>{{cuartosvisitante[0]}}</td>
+							<td>{{cuartosvisitante[1]}}</td>
+							<td>{{cuartosvisitante[2]}}</td>
+							<td>{{cuartosvisitante[3]}}</td>
+						</tr>
+					</table>
+					<br>
+					<br>
+					%contador = 0
+					<table border=1>
+						<tr>
+							<td><b>Nombre</b></td>
+							<td><b>Posicion</b></td>
+							<td><b>Puntos</b></td>
+							<td><b>Asistencias</b></td>
+							<td><b>Perdidas</b></td>
+							<td><b>Robos</b></td>
+							<td><b>Faltas P.</b></td>
+						</tr>
+						%for i in listavjugador:
+						<tr>
+							<td>{{i}}</td>
+							<td>{{listavpos[contador]}}</td>
+							<td>{{listavpuntos[contador]}}</td>
+							<td>{{listavasis[contador]}}</td>
+							<td>{{listavperdidas[contador]}}</td>
+							<td>{{listavrobos[contador]}}</td>
+							<td>{{listavfaltas[contador]}}</td>
+						</tr>
+						%contador = contador + 1
+						%end
+					</table>
+				</div>	
+			</div>
+% include('footer.html')

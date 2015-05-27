@@ -1,0 +1,34 @@
+body{
+	font-size:12px;
+}
+
+#container{
+	width: 90%;
+	height: 90%;
+}
+
+#contenido{
+	width:90%;
+	height: 90%;
+	margin-left: 5%;
+	margin-top: 5%;
+}
+
+#clasieste{
+	
+}
+
+#clasioeste{
+
+}
+#local{
+	width: 50%;
+	position:absolute;
+	left:13%;
+}
+
+#visitante{
+	width: 50%;
+	position:absolute;
+	left:53%;
+}

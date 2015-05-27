@@ -1,0 +1,33 @@
+% include('header.html')
+			<div id='contenido'>
+				<div id='clasificacion'>
+					%contadoreste = 0
+					%contadorclasi = 1
+					<h2>CLASIFICACION ESTE</h2>
+					<table border=1>
+						<tr>
+							<td><b>Pos</b></td>
+							<td><b>Equipo</b></td>
+							<td><b>P. Ganados</b></td>
+							<td><b>P. Perdidos</b></td>
+							<td><b>Pun. favor</b></td>
+							<td><b>Pun. contra</b></td>
+							<td><b>Diferencia</b></td>
+						</tr>
+							%for equipoeste in clasificacioneste:
+							<tr>
+								<td>{{contadorclasi}}</td>
+								<td><a href=/equipo?idequipo={{ideste[contadoreste]}}>{{equipoeste}}</a></td>
+								<td>{{ganadoseste[contadoreste]}}</td>
+								<td>{{perdidoseste[contadoreste]}}</td>
+								<td>{{favoreste[contadoreste]}}</td>
+								<td>{{contraeste[contadoreste]}}</td>
+								<td>{{diferenciaeste[contadoreste]}}</td>
+								%contadoreste = contadoreste + 1
+								%contadorclasi = contadorclasi + 1
+							</tr>
+							%end
+					</table>
+				</div>
+			</div>
+% include('footer.html')

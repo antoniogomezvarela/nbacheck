@@ -1,0 +1,56 @@
+% include('header.html')
+			<div id='contenido'>
+				<center><h1>{{equipo}}</h1></center>
+				<br>
+				<div id='jugadores'>
+					%contadorjugador = 0
+					<h3>Plantilla</h3>
+					<table border=1>
+						<tr>
+							<td><b>Nombre</b></td>
+							<td><b>Edad</b></td>
+							<td><b>Altura</b> (cm)</td>
+							<td><b>Peso</b> (Kg)</td>
+							<td><b>Posición</b></td>
+						</tr>
+					%for jugador in listajugadores:
+						<tr>
+							<td>{{jugador}}</td>
+							<td>{{listaedad[contadorjugador]}}</td>
+							<td>{{listaaltura[contadorjugador]}}</td>
+							<td>{{listapeso[contadorjugador]}}</td>
+							<td>{{listaposiciones[contadorjugador]}}</td>
+						</tr>
+					%contadorjugador = contadorjugador + 1 
+					%end
+					</table>
+					<br>
+				</div>
+				<div id='result'>
+					<h3>Ultimos resultados</h3>
+					<table border=1>
+						<tr>
+							<td><b>Oponente</b></td>
+							<td><b>Puntos</b></td>
+							<td><b>Resultado</b></td>
+						</tr>
+						%contadorpartido = 0
+						%for i in range(10):
+						<tr>
+							<input type="hidden" name='id' value={{listaidpartido[contadorpartido]}}>
+							<td>{{listaoponente[contadorpartido]}}</td>
+							<td>{{listapfavor[contadorpartido]}}-{{listapcontra[contadorpartido]}}</td>
+							<td><a href=/partido?idpartido={{listaidpartido[contadorpartido]}}>Ver</a></td>
+						</tr>
+						%contadorpartido= contadorpartido + 1
+						%end
+					</table>
+				</div>
+				<br>
+				<div id='descrip'>
+					{{descrip}}
+				</div>
+				<br>
+				<a href="javascript:history.go(-1);">Atras</a>
+			</div>
+% include('footer.html')
