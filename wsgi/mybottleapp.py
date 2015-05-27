@@ -157,7 +157,9 @@ def equipo():
 	listapfavor=[]
 	listapcontra=[]
 
-	req = requests.get("https://erikberg.com/nba/results/%s.json?season=2014"% idequipo, headers=headers)
+	anno = datetime.date.today().strftime("%Y")
+
+	req = requests.get("https://erikberg.com/nba/results/%s.json?season=%s"% (idequipo,anno), headers=headers)
 	salida = json.loads(req.text)
 
 	for i in salida:

@@ -1,5 +1,11 @@
 body{
 	font-size:12px;
+	color: black;
+	background: url(/static/fondo2.jpg) no-repeat center center fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
 }
 
 #container{
@@ -14,13 +20,12 @@ body{
 	margin-top: 5%;
 }
 
-#clasieste{
-	
+#clasi{
+	position: absolute;
+	left:30%;
+	top:15%;
 }
 
-#clasioeste{
-
-}
 #local{
 	width: 50%;
 	position:absolute;
@@ -31,4 +36,18 @@ body{
 	width: 50%;
 	position:absolute;
 	left:53%;
+}
+
+#jugadores{
+	float:left;
+	left:5%;
+}
+
+#result{
+	margin-left: 60%;
+}
+
+#descrip{
+	float:right;
+	left: 5%;
 }
